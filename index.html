@@ -1,28 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MtG Stack Analyzer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_v3.css">
 </head>
 <body>
     <header>
         <h1>Magic: The Gathering Stack Analyzer</h1>
     </header>
     <main>
-        <section id="player-section">
-            <h2>Players</h2>
-            <button id="add-player-btn">Add Player</button>
+        <div id="players-grid">
             <div id="players-container"></div>
-        </section>
-        <section id="stack-section">
-            <h2>Stack</h2>
-            <div id="stack-container"></div>
+        </div>
+        <div id="stack-section">
             <button id="analyze-stack-btn">Analyze Stack</button>
-        </section>
+            <div id="stack-log"></div>
+        </div>
     </main>
-    <script src="script.js"></script>
+    <script src="script_v3.js"></script>
 </body>
 </html>
