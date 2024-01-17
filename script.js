@@ -1,4 +1,3 @@
-
 document.getElementById('analyze-stack-btn').addEventListener('click', analyzeStack);
 
 let playerId = 0;
