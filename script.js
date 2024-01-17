@@ -10,7 +10,8 @@ function addPlayer() {
     playerContainer.id = 'player-' + playerId;
     playerContainer.innerHTML = '<h3>Player ' + playerId + '</h3>' +
                                 '<button onclick="addCardToBattlefield(' + playerId + ')">Add Card to Battlefield</button>' +
-                                '<div class="battlefield" id="battlefield-' + playerId + '"></div>';
+                                '<div class="battlefield" id="battlefield-' + playerId + '"></div>' +
+                                '<button onclick="addCardToStack(' + playerId + ')">Add Card to Stack</button>';
     document.getElementById('players-container').appendChild(playerContainer);
 }
 
@@ -37,7 +38,6 @@ function addCardToStack(playerId) {
 
 function analyzeStack() {
     // Simplified stack analysis logic (placeholder for now)
-    // This can be expanded with specific MtG rules and interactions
     const stackContainer = document.getElementById('stack-container');
     const cards = stackContainer.querySelectorAll('div');
     let analysisResult = '';
@@ -45,4 +45,6 @@ function analyzeStack() {
         analysisResult += card.textContent + ' resolves.\n';
     });
     alert('Stack Analysis:\n' + analysisResult);
+    // Clear the stack after analysis
+    stackContainer.innerHTML = '';
 }
